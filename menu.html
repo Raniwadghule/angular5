@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-image: url("Image/bilmage.jpg");
+    background-color: #cccccc;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.main
+{
+
+
+height:100%;
+width:100%;
+
+}.dropbtn {
+    
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+   
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+   
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+
+
+
+<div class="dropdown" >
+
+<button onclick="myFunction()" class="dropbtn" ><font color="black" size="15px">HOME</font></button>
+  <div id="myDropdown" class="dropdown-content">
+   <a href="MyAccount.html"><font color="white"> MY ACCOUNT</font></a>
+    <a href="OrderSummaryEdit.html"><font color="white">ORDER HISTORY</font></a>
+    <a href="OrderSummaryAddOnSpecial.html"><font color="white">QUICK REORDER</font></a>
+	<a href="MyCoupons.html"><font color="white">MY COUPONS</font></a>
+	<a href="Notification.html"><font color="white">NOTIFICATIONS</font></a>
+	<a href="#contact"><font color="white">CONNECT TO<BR>MASTERPASS</font></a>
+	<a href="#contact"><font color="white">ORDER WITH<br>PEPPER</font></a>
+	<a href="#contact"><font color="white">FIND A HUT</font></a>
+	<a href="faq1.html"><font color="white">FAQ</font></a>
+	<a href="TermsOfUse.html"><font color="white">TERMS OF USE</font></a>
+	<a href="ContactUs.html"><font color="white">CONTACT US</font></a>
+  </div>
+  
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>

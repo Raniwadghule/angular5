@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-image: url("Image/bilmage.jpg");
+    background-color: #cccccc;
+}
+.container{
+width:100%;
+padding-bottom:10px;
+margin-left:400px;
+}
+
+ 
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.col {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fb {
+
+  background-color: #808080;
+  color: white;
+  padding: 50px;
+}
+.col {
+  float: left;
+  width: 800px;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+  margin-left:50px;
+ 
+ 
+}
+ 
+.btn {
+  width: 250px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-align:center;
+  
+  text-decoration: none; /* remove underline from anchors */
+}
+.bottom-container {
+  text-align: center;
+  background-color: 	#DAA520;
+  border-radius: 0px 0px 4px 4px;
+  width:1000px;
+  margin-left:100px;
+}
+
+</style>
+</head>
+<body>
+<div>
+<div class="container"  >
+<span class="carousel-control-prev-icon" ></span>
+<img src="Image/logo.png"  width="304px;" height="100px" />
+</div>
+<div class="main" style="text-align:center;">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="Image/sliderimage.jpg" style="width:1000px; height:300px;">
+ <!--<div class="text">Caption Text</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="Image/Margherit.jpg" style="width:1000px;height:300px;">
+ <!-- <div class="text">Caption Two</div>-->
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="Image/sliderimage.jpg" style="width:1000px;height:300px;">
+ <!-- <div class="text">Caption Three</div>-->
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div class="bottom-container">
+<div class="row">
+<a href="homeMenu.html" style="color:white; padding-right:170px;" class="btn">HOT DEALS</a>
+    </div>
+	</div>
+
+ <div class="row" >
+ <div class="col" >
+        <a href="homeMenu.html" class="fb btn" style="width:350px;">
+           PIZZA
+         </a>
+        <a href="homeMenu.html" class="fb btn" style="margin-left:40px; width:350px;">
+         PASTA
+        </a>
+        
+      </div>
+ <div class="col">
+<a href="#" class="fb btn"style="width:350px;">
+          BAKED RICE
+         </a>
+        <a href="homeMenu.html" class="fb btn"style="margin-left:40px;width:350px;">
+           SIDES
+        </a>
+       
+      </div>
+	   <div class="col" >
+<a href="homeMenu.html" class="fb btn"style="width:350px;">
+        
+         </a>
+        <a href="homeMenu.html" class="fb btn"style="margin-left:40px;width:350px;">
+         
+        </a>
+       
+      </div>
+	  </div>
+ <div class="bottom-container">
+<div class="row" style="background-color:#ff4040">
+<a href="homeMenu.html" style="color:white; margin-right:400px;" class="btn">VIEW ORDER</a>
+<a href="homeMenu.html" style="color:white" class="btn">$20.00</a>
+    </div>
+	</div>
+</div>
+</div>
+
+</body>
+</html>

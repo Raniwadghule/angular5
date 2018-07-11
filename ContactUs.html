@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-image: url("Image/bilmage.jpg");
+    background-color: #cccccc;
+	font-family: Arial;
+	color:white;
+}
+.container{
+background-color:red;
+text-align: center;
+width:100%;
+padding-bottom:10px;
+
+}
+.main
+{
+
+text-align:center;
+height:100%;
+width:100%;
+
+}
+.scope{
+background-color:#f2f2f2;;
+width:100%;
+height:100%;
+text-align: center;
+ border-radius: 5px;
+  padding: 20px;
+ 
+}
+.form-group{
+background-color:#A9A9A9;
+
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+	
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.col{
+background-color:#f2f2f2;;
+width:100%;
+height:50px;
+
+ border-radius: 5px;
+ margin-top:50px;
+   opacity: 0.85;
+   padding:10px;
+}
+ #ContainerDiv {
+  margin: auto;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#InnerContainer {
+  width: 100%;
+}
+
+#TheBelowDiv {
+  font-size: 18pt;
+  font-family: Tahoma;
+  text-align: center;
+  color: white;
+} 
+   
+</style>
+</head>
+<body>
+ 
+<div>
+<div class="container"  >
+<h1> CONTACT US</h1>
+</div>
+<div class="main">
+<font color="white" ><h3>Thank you for the support.We value your<br>
+input on our services.</h3></font>
+<div class="scope">
+ <form action="#">
+    <label for="name" margin-left="0 auto"> NAME</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+ <label for="email"> EMAIL</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+   <label for="mobile"> MOBILE NUMBER</label>
+    <input type="text" id="mobile" name="mobile" placeholder="Your mobile number..">
+<!--
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>-->
+
+    <label for="comments">COMMENTS</label>
+    <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px"></textarea>
+  </form> 
+  </div>
+    
+     <div id="ContainerDiv">
+    <div id="InnerContainer">
+        <div id="TheBelowDiv">
+   <div class="col">
+      <a href="faq1.html" style="color:black;text-decoration: none; " class="btn">Submit</a>
+    </div>
+
+        </div>
+    </div>
+    </div>
+
+</div>
+</div>
+</body>
+</html>
